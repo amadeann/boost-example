@@ -1,0 +1,45 @@
+{
+	"servers": {
+		"mysql": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"@benborla29/mcp-server-mysql@2.0.5"
+			],
+			"env": {
+				"MYSQL_HOST": "${input:mysql_host}",
+				"MYSQL_PORT": "${input:mysql_port}",
+				"MYSQL_USER": "${input:mysql_user}",
+				"MYSQL_PASS": "${input:mysql_pass}",
+				"MYSQL_DB": "${input:mysql_pass}"
+			}
+		},
+	},
+	"inputs": [
+		{
+			"id": "mysql_host",
+			"type": "promptString",
+			"description": "MySQL Hostname"
+		},
+		{
+			"id": "mysql_port",
+			"type": "promptString",
+			"description": "MySQL Port"
+		},
+		{
+			"id": "mysql_user",
+			"type": "promptString",
+			"description": "MySQL Username"
+		},
+		{
+			"id": "mysql_pass",
+			"type": "promptString",
+			"description": "MySQL Password"
+		},
+		{
+			"id": "mysql_pass",
+			"type": "promptString",
+			"description": "MySQL Password"
+		}
+	]
+}
